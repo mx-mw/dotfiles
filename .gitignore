@@ -2,6 +2,10 @@
 !awesome/
 !awesome/**
 !kitty/
+!kitty/**
 !neofetch
+!neofetch/**
 !README.md
 !.gitignore
+!misc
+!misc/**
