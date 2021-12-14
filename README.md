@@ -34,3 +34,5 @@
             <td><code>Nemo</code>
         </tr>
     </table>
+
+Make sure to install [Rubato](https://github.com/andOrlando/rubato) in the `awesome` directory for animations (broken rn but like do that anyways)

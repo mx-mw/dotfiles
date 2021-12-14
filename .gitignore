@@ -1,5 +1,6 @@
 *
 !awesome/
+!awesome/**
 !kitty/
 !neofetch
 !README.md
