@@ -33,15 +33,6 @@ return {
 				spacing = 8, 
 				layout = wibox.layout.align.horizontal,
 			},
-			-- {
-			-- 	day,
-			-- 	-- wibox.widget {
-			-- 	-- 	markup = '/',
-			-- 	-- 	widget = wibox.widget.textbox
-			-- 	-- },
-			-- 	month,
-			-- 	layout = wibox.layout.align.horizontal
-			-- },
 			spacing = 25,
 			layout = wibox.layout.fixed.horizontal
 		},

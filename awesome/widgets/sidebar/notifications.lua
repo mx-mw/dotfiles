@@ -105,6 +105,7 @@ notifications:apply_cb(function ()
 			layout = wibox.layout.fixed.horizontal
 		}
 	))
+	collectgarbage("collect")
 	end
 end)
 

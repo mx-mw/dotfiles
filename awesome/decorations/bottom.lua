@@ -61,6 +61,8 @@ local bottom = function(c, args)
         }, "vertical")
 
     set_titlebar(c, corner_bottom_left_img, bottom_edge, corner_bottom_right_img)
+
+	collectgarbage("collect")
 end
 
 return bottom

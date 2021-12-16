@@ -176,7 +176,7 @@ gears.timer {
 watch(spotify_commands.song, 1, function(widget, out, a, b, c) 
 	-- its ugly, and I am ashamed, but it works
 	widget.markup = "<span foreground='"..beautiful.red_light.."'> "..string.match(string.match(out, '".+"'), '([a-zA-Z0-9 ,-.]+)').." </span>"
-
+	collectgarbage("collect")
 end, song)
 
 watch(spotify_commands.artist, 1, function(widget, out, a, b, c) 
@@ -184,6 +184,7 @@ watch(spotify_commands.artist, 1, function(widget, out, a, b, c)
 	local with_quotes = string.match(out, '".+"')
 	if(with_quotes == nil) then return end
 	widget.markup = "<span foreground='".."#aaa".."'> "..string.match(with_quotes, '([a-zA-Z0-9 ,-.]+)').." </span>"
+	collectgarbage("collect")
 end, artist)
 
 return  {

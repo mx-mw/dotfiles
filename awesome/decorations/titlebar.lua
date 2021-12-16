@@ -56,6 +56,8 @@ local get_titlebar = function(c)
         widget = wibox.container.background,
     }
 
+	collectgarbage("collect")
+
     return titlebar
 end
 

@@ -64,6 +64,8 @@ local left = function(c, args)
 	elseif conf.EDGES then
         set_left_titlebar(c, left_border_img, args.client_color)
     end
+
+	collectgarbage("collect")
 end
 
 return left

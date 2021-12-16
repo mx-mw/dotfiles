@@ -63,6 +63,8 @@ local top = function(c, args)
     }
     
     get_titlebar(c, titlebar_height, corner_top_left_img, top_edge, corner_top_right_img)
+	collectgarbage("collect")
+
 end
 
 return top

@@ -98,3 +98,5 @@ awesome.connect_signal('sidebar::toggle', function()
 		sidebar.x = 4478
 	end
 end)
+
+collectgarbage("collect")

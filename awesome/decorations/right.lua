@@ -11,7 +11,7 @@ local set_titlebar = function(c, right_border_img, client_color)
     }
 end
 
-local left = function(c, args)
+local right = function(c, args)
     local right_border_img = shapes.flip(
         shapes.create_edge_left {
             client_color = args.client_color,
@@ -25,6 +25,8 @@ local left = function(c, args)
         }, "horizontal")
 
     set_titlebar(c, right_border_img, args.client_color)
+	collectgarbage("collect")
+
 end
 
-return left
+return right
