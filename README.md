@@ -37,6 +37,6 @@
 
 VSCode theme: cardinal.arc-horizon
 
-Make sure to install [Rubato](https://github.com/andOrlando/rubato) in the `awesome` directory for animations (broken rn but like do that anyways)
+Make sure to install [Rubato](https://github.com/andOrlando/rubato) in the `awesome` directory for animations (broken rn but like do that anywgays)
 
 Also ***huge*** credit to [this chad](https://github.com/drahenprofi/dotfiles) because i stole his color theme and a bunch of the widgets
