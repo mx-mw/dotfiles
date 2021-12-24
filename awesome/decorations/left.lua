@@ -8,8 +8,8 @@
 
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require('beautiful')
-local gears = require('gears')
+local beautiful = require('lib.beautiful')
+local gears = require('lib.gears')
 local conf  = require('conf')
 local shapes = require("lib.shapes")
 

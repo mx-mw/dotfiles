@@ -1,10 +1,10 @@
-local beautiful  = require('beautiful')
-local xresources = require('beautiful.xresources')
+local beautiful  = require('lib.beautiful')
+local xresources = require('lib.beautiful.xresources')
 local dpi        = xresources.apply_dpi
-local awful      = require('awful')
+local awful      = require('lib.awful')
 local wibox      = require('wibox')
 local tasklist_buttons = require('widgets.bottombar.tasklist_buttons')
-local gears          = require('gears')
+local gears          = require('lib.gears')
 
 return function (s)
     local mytasklist = awful.widget.tasklist {

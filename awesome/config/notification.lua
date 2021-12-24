@@ -1,6 +1,6 @@
-local naughty = require('naughty')
-local gears = require('gears')
-local beautiful = require('beautiful')
+local naughty = require('lib.naughty')
+local gears = require('lib.gears')
+local beautiful = require('lib.beautiful')
 
 local dpi = beautiful.xresources.apply_dpi
 

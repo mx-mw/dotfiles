@@ -1,5 +1,5 @@
-local awful = require('awful')
-local gears = require('gears')
+local awful = require('lib.awful')
+local gears = require('lib.gears')
 
 layout = awful.widget.layoutbox()
 layout:buttons(gears.table.join(

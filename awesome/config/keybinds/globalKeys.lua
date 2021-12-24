@@ -1,6 +1,6 @@
-local gears = require('gears')
-local awful = require('awful')
-local hotkeys_popup = require('awful.hotkeys_popup')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
+local hotkeys_popup = require('lib.awful.hotkeys_popup')
 local menubar = require('menubar')
 local Apps = require('config.apps')
 -- Set the modifier key to alt

@@ -1,11 +1,11 @@
 ------------
 -- Lucius --
 ------------
-local xresources = require('beautiful.xresources')
+local xresources = require('lib.beautiful.xresources')
 local dpi = xresources.apply_dpi
 
-local theme_assets = require('beautiful.theme_assets')
-local gears = require('gears')
+local theme_assets = require('lib.beautiful.theme_assets')
+local gears = require('lib.gears')
 local theme = {}
 local conf = require('conf')
 

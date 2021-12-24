@@ -1,5 +1,5 @@
-local beautiful = require('beautiful')
-local awful = require('awful')
+local beautiful = require('lib.beautiful')
+local awful = require('lib.awful')
 local clientkeys = require('config.keybinds.clientKeys')
 local clientbuttons = require('config.keybinds.clientButtons')
 local rules = {

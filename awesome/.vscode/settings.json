@@ -1,5 +1,9 @@
 {
 	"Lua.diagnostics.disable": [
-		"lowercase-global"
+		"lowercase-global",
+		"undefined-global",
+		"deprecated",
+		"ambiguity-1",
+		"different-requires"
 	]
 }

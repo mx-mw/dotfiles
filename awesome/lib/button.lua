@@ -1,7 +1,7 @@
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
-local gears = require("gears")
+local gears = require("lib.gears")
 
 local button = {}
 

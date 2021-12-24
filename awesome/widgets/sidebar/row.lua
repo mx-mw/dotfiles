@@ -1,6 +1,6 @@
 local wibox = require('wibox')
-local gears = require('gears')
-local beautiful = require('beautiful')
+local gears = require('lib.gears')
+local beautiful = require('lib.beautiful')
 local borders = require('lib.borders')
 
 return function(w, h)

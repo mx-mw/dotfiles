@@ -1,7 +1,7 @@
-local gears = require('gears')
-local awful = require('awful')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
 local wibox = require('wibox')
-local beautiful = require('beautiful')
+local beautiful = require('lib.beautiful')
 
 awful.screen.connect_for_each_screen(function(s)
     local home = '  '

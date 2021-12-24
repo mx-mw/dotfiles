@@ -1,5 +1,5 @@
-local xresources = require('beautiful.xresources')
-local gears = require('gears')
+local xresources = require('lib.beautiful.xresources')
+local gears = require('lib.gears')
 
 local dpi = xresources.apply_dpi
 local theme = {}

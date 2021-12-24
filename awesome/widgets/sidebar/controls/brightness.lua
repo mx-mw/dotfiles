@@ -1,10 +1,10 @@
-local gears      = require('gears')
-local beautiful  = require('beautiful')
-local xresources = require('beautiful.xresources')
+local gears      = require('lib.gears')
+local beautiful  = require('lib.beautiful')
+local xresources = require('lib.beautiful.xresources')
 local dpi        = xresources.apply_dpi
 local wibox      = require('wibox')
 local box        = require('lib.box')
-local awful      = require('awful')
+local awful      = require('lib.awful')
 local borders = require('lib.borders')
 
 local content = {}

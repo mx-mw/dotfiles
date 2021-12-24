@@ -1,4 +1,4 @@
-local gfs = require('gears.filesystem')
+local gfs = require('lib.gears.filesystem')
 
 local icon_path = gfs.get_configuration_dir() .. 'icons/'
 local themes_path = gfs.get_themes_dir()

@@ -1,7 +1,7 @@
-local gfs = require('gears.filesystem')
+local gfs = require('lib.gears.filesystem')
 local icons_path = gfs.get_configuration_dir()..'icons/'
-local xresources = require('beautiful.xresources')
-local gears = require('gears')
+local xresources = require('lib.beautiful.xresources')
+local gears = require('lib.gears')
 
 local dpi = xresources.apply_dpi
 local theme = {}

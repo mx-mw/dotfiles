@@ -1,5 +1,5 @@
-local gears = require('gears')
-local awful = require('awful')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
 
 return function (c)
     -- Set the windows at the slave,

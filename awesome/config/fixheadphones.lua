@@ -1,5 +1,5 @@
-local awful = require('awful')
-local gears = require('gears')
+local awful = require('lib.awful')
+local gears = require('lib.gears')
 function split (inputstr, sep)
     if sep == nil then
             sep = "%s"

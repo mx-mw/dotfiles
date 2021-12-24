@@ -1,8 +1,8 @@
-local awful = require('awful')
+local awful = require('lib.awful')
 local taglist_buttons = require('widgets.bottombar.taglist_buttons')
 local wibox = require('wibox')
-local gears = require('gears')
-local beautiful = require('beautiful')
+local gears = require('lib.gears')
+local beautiful = require('lib.beautiful')
 local dpi = beautiful.xresources.apply_dpi
 return function (s)
 	local mytaglist = awful.widget.taglist {
@@ -27,8 +27,9 @@ return function (s)
 	
 	local margin = 5
     return wibox.widget {
+		require('lib.hamburger')(nil),
         -- width = dpi(30000),
-        wibox.container.margin(mytaglist, margin, margin, margin, margin),
+        -- wibox.container.margin(mytaglist, margin, margin, margin, margin),
         bg = beautiful.bg_normal,
         widget = wibox.container.background,
         expand = "none",

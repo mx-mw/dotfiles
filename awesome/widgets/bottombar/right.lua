@@ -1,5 +1,5 @@
 local wibox = require('wibox')
-local beautiful = require('beautiful')
+local beautiful = require('lib.beautiful')
 local mytextclock = wibox.widget.textclock()
 return function(s)   -- Right widgets
     return wibox.widget {

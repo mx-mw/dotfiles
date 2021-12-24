@@ -1,6 +1,6 @@
 local wibox = require("wibox")
 local beautiful = require("beautiful")
-local gears = require('gears')
+local gears = require('lib.gears')
 local row = require('widgets.sidebar.row')
 
 local hours = wibox.widget.textclock()

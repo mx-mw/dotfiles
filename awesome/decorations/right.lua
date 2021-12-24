@@ -1,6 +1,6 @@
 local awful = require("awful")
 local wibox = require("wibox")
-local beautiful = require('beautiful')
+local beautiful = require('lib.beautiful')
 
 local shapes = require("lib.shapes")
 

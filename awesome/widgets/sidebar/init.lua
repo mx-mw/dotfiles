@@ -1,11 +1,11 @@
 local wibox = require('wibox')
-local awful = require('awful')
-local xresources = require('beautiful.xresources')
+local awful = require('lib.awful')
+local xresources = require('lib.beautiful.xresources')
 local rubato = require('rubato')
 local row = require('widgets.sidebar.row')
 local dpi = xresources.apply_dpi
 local borders = require('lib.borders')
-
+local gears = require('lib.gears')
 --[[ Sidebar Construction ]]--
 
 local dims = {
@@ -44,6 +44,7 @@ container:setup {
 	spacing = 30
 }
 
+
 sidebar:setup {
 	borders(container, dims.width, dims.height, 5),
 	widget = wibox.container.background
@@ -51,21 +52,22 @@ sidebar:setup {
 
 --[[ Animations ]]--
 
--- local timed = rubato.timed {
--- 	intro = 0.05,
--- 	duration = 0.15,
--- 	rate = 100,
--- 	easing = rubato.easing.quadratic
--- }
+local timed = rubato.timed {
+	intro = 0.05,
+	duration = 0.15,
+	rate = 100,
+	easing = rubato.easing.quadratic
+}
 
--- timed:subscribe(function (pos)
--- 	sidebar.x = pos
--- end) 
--- timed.target = 4478
--- timed.target = 4478
+timed:subscribe(function (pos)
+	gears.debug.print_warning('update '..pos)
+	sidebar.x = pos
+end) 
+timed.target = 4478
+timed.target = 4478
+
 
 --[[ Signals ]]--
-
 
 sidebar:connect_signal('mouse::leave', function() 
 	if(sidebar.x == 4480-dims.width) then 
@@ -84,19 +86,15 @@ sidebar:connect_signal('button::release', function()
 		awesome.emit_signal('sidebar::toggle') 
 	end
 end)
-sidebar.x = 4478
-awesome.connect_signal('sidebar::toggle', function() 
-	-- sidebar.visible = not sidebar.visible
-	-- if(timed.target == 4478) then
-	-- 	timed.target = 4480-dims.width
-	-- else
-	-- 	timed.target = 4478
-	-- end
-	if(sidebar.x == 4478) then
-		sidebar.x = 4480-dims.width
+
+awesome.connect_signal('sidebar::toggle', function()
+	if(timed.target == 4478) then
+		timed.target = 4480-dims.width
 	else
-		sidebar.x = 4478
+		timed.target = 4478
+
 	end
 end)
+
 
 collectgarbage("collect")

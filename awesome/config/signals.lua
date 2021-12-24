@@ -1,4 +1,4 @@
-local awful = require('awful')
+local awful = require('lib.awful')
 
 
 -- 🛑 Signals And Rules 🛑 --

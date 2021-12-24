@@ -1,6 +1,6 @@
-local beautiful = require('beautiful')
-local gears = require('gears')
-local awful = require('awful')
+local beautiful = require('lib.beautiful')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
 
 local modkey = 'Mod1'
 -- Create a wibox for each screen and add it

@@ -4,7 +4,7 @@ local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 local get_titlebar = require("decorations.titlebar")
 local shapes = require("lib.shapes")
-local gears  = require('gears')
+local gears  = require('lib.gears')
 local titlebar
 
 local get_titlebar = function(c, height, corner_top_left_img, top_edge, corner_top_right_img)

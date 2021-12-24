@@ -1,8 +1,8 @@
-local awful = require('awful')
+local awful = require('lib.awful')
 local taglist_buttons = require('widgets.topbar.taglist_buttons')
 local wibox = require('wibox')
-local gears = require('gears')
-local beautiful = require('beautiful')
+local gears = require('lib.gears')
+local beautiful = require('lib.beautiful')
 local dpi = beautiful.xresources.apply_dpi
 return function (s)
     -- Each screen has its own tag table.

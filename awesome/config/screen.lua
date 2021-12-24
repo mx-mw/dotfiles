@@ -1,6 +1,6 @@
-local beautiful = require('beautiful')
-local gears = require('gears')
-local awful = require('awful')
+local beautiful = require('lib.beautiful')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
 local function set_wallpaper (s)
     -- Wallpaper
     if beautiful.wallpaper then

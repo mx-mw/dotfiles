@@ -1,11 +1,11 @@
-local xresources       = require('beautiful.xresources')
-local gears            = require('gears')
+local xresources       = require('lib.beautiful.xresources')
+local gears            = require('lib.gears')
 local borders          = require('lib.borders')
 local conf             = require('conf')
 local dpi              = xresources.apply_dpi
-local awful            = require('awful')
+local awful            = require('lib.awful')
 local wibox            = require('wibox')
-local beautiful        = require('beautiful')
+local beautiful        = require('lib.beautiful')
 
 
 awful.screen.connect_for_each_screen(function(s)
@@ -46,7 +46,7 @@ awful.screen.connect_for_each_screen(function(s)
 				
 				{
 					bg = beautiful.bg_normal,
-					require('widgets.bottombar.left')(s),
+					require('widgets.bottombar.tags')(s),
 					shape_clip = true,
 					shape = function(cr, width, height) 
 						gears.shape.partially_rounded_rect(cr, width, height, false, false, false, false, 10)

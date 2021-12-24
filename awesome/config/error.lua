@@ -1,4 +1,4 @@
-local naughty = require('naughty')
+local naughty = require('lib.naughty')
 
 -- 🚫 Handle Errors 🚫 --
 if awesome.startup_errors then

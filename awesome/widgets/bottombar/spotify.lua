@@ -3,7 +3,7 @@ local awful = require("awful")
 local gears = require("gears")
 local beautiful = require("beautiful")
 local textbutton= require("lib.textbutton")
-local xresources = require('beautiful.xresources')
+local xresources = require('lib.beautiful.xresources')
 local dpi = xresources.apply_dpi
 ----------------------
 -- Spotify commands --

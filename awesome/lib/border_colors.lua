@@ -6,7 +6,7 @@ The following code is a derivative work of the code from the awesome-wm-nice pro
 is also licensed under the terms of the MIT License
 ]]--
 
-local gears = require("gears")
+local gears = require("lib.gears")
 local cairo = require("lgi").cairo
 
 local stroke_inner_bottom_lighten_mul = 0.4

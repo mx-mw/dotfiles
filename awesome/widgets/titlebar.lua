@@ -1,5 +1,5 @@
-local gears = require('gears')
-local awful = require('awful')
+local gears = require('lib.gears')
+local awful = require('lib.awful')
 local wibox = require('wibox')
 local dump = require('lib.dump')
 client.connect_signal('request::titlebars', function(c)

@@ -1,5 +1,5 @@
 local wibox = require('wibox')
-local beautiful = require('beautiful')
+local beautiful = require('lib.beautiful')
 local awful = require('awful')
 return function (text, onclick)
     local textbox = wibox.widget {

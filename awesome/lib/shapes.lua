@@ -6,9 +6,9 @@ The following code is a derivative work of the code from the awesome-wm-nice pro
 is also licensed under the terms of the MIT License
 ]]--
 
-local gears = require('gears')
+local gears = require('lib.gears')
 local cairo = require('lgi').cairo
-local beautiful = require('beautiful')
+local beautiful = require('lib.beautiful')
 -- Flips the given surface around the specified axis
 local function flip(surface, axis)
     local width = surface:get_width()

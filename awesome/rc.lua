@@ -1,9 +1,9 @@
 pcall(require, 'luarocks.loader')
 
 -- 🐈 Modules 🐈 --
-require('awful.autofocus')
+require('lib.awful.autofocus')
 require('theme')
-require('awful.hotkeys_popup.keys')
+require('lib.awful.hotkeys_popup.keys')
 require('config')
 require('decorations')
 require('widgets')
