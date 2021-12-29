@@ -1,6 +1,7 @@
 local wibox = require("wibox")
 local awful = require("awful")
-local gears = require("gears")
+local gears = require("lib.gears")
+
 local beautiful = require("beautiful")
 local textbutton= require("lib.textbutton")
 local xresources = require('lib.beautiful.xresources')

@@ -54,7 +54,18 @@ local keys = gears.table.join(
         {description = 'go back', group = 'client'}),
 
     -- Standard program
-    awful.key({ modkey,           }, 'Return', function () awful.spawn(Apps.terminal) end,
+    awful.key({ modkey,           }, 'Return', function ()
+		local focused_screen = awful.screen.focused()
+		local all_clients = focused_screen.clients
+		for index, value in ipairs(all_clients) do
+			if(value.class:lower() == "kitty") then 
+				client.focus = value
+				value:raise()
+				return
+			end
+		end
+		awful.spawn(Apps.terminal) 
+	end,
               {description = 'open a terminal', group = 'launcher'}),
     awful.key({ modkey, 'Control' }, 'r', awesome.restart,
               {description = 'reload awesome', group = 'awesome'}),

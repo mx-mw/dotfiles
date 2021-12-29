@@ -60,7 +60,6 @@ local timed = rubato.timed {
 }
 
 timed:subscribe(function (pos)
-	gears.debug.print_warning('update '..pos)
 	sidebar.x = pos
 end) 
 timed.target = 4478

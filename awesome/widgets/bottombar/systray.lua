@@ -2,6 +2,7 @@ local beautiful = require('lib.beautiful')
 local gears     = require('lib.gears')
 local awful     = require('lib.awful')
 local xresources = require("beautiful.xresources")
+
 local dpi = xresources.apply_dpi
 local wibox     = require('wibox')
 return function () 

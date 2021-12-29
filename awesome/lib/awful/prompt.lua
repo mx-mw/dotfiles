@@ -118,6 +118,7 @@ local capi =
 {
     selection = selection
 }
+---@diagnostic disable-next-line: deprecated
 local unpack = unpack or table.unpack -- luacheck: globals unpack (compatibility with Lua 5.1)
 local keygrabber = require("awful.keygrabber")
 local beautiful = require("beautiful")

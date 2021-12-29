@@ -27,9 +27,8 @@ return function (s)
 	
 	local margin = 5
     return wibox.widget {
-		require('lib.hamburger')(nil),
         -- width = dpi(30000),
-        -- wibox.container.margin(mytaglist, margin, margin, margin, margin),
+        wibox.container.margin(mytaglist, margin, margin, margin, margin),
         bg = beautiful.bg_normal,
         widget = wibox.container.background,
         expand = "none",

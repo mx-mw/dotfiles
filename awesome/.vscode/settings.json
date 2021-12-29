@@ -4,6 +4,8 @@
 		"undefined-global",
 		"deprecated",
 		"ambiguity-1",
-		"different-requires"
+		"different-requires",
+		"unbalanced-assignments",
+		"redundant-parameter"
 	]
 }

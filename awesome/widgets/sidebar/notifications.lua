@@ -1,9 +1,11 @@
 local row = require('widgets.sidebar.row')
 local wibox = require('wibox')
 local naughty = require('lib.naughty')
-local gears = require('lib.gears')
+local rubato = require('rubato')
 local box = require('lib.bottombar.dock_item')
 local beautiful = require("beautiful")
+local debug = require('gears.debug')
+local print = debug.print_warning
 local content = wibox.layout.fixed.vertical()
 content.spacing = 10
 content.overflow = 'clip'
@@ -32,11 +34,25 @@ function Queue:add(i)
 end
 
 function Queue:del(index)
-	table.remove(self.queue, index or #self.queue)
-	for i, _ in ipairs(self.queue) do
-		self.queue[i].index = i
-	end
-	self.update_cb()
+	local notif = self.queue[index or #self.queue]
+	local timed = rubato.timed {
+		duration = 0.5,
+		intro    = 0.05,
+		rate     = 10,
+		subscribed = function(opa)
+			notif.item.opacity = 100 - opa
+			self.update_cb()
+			if opa == 100 then
+				table.remove(self.queue, index or #self.queue)
+				for i, _ in ipairs(self.queue) do
+					self.queue[i].index = i
+				end
+				self.update_cb()
+			end
+		end
+	}
+	timed.target = 100
+	
 end
 
 function Queue:find(item)
@@ -68,44 +84,46 @@ end
 
 local notifications = Queue:new()
 
-notifications:apply_cb(function ()
+notifications:apply_cb(function (...)
 	content:reset(content)
 	for i, v in ipairs(notifications.queue) do
-
-		content:add(row(
-		{
+		local widget = wibox.widget {
 			{
-				wibox.widget {
-					image = v.item.icon,
-					widget = wibox.widget.imagebox
-				},
 				{
-					valign = 'centered',
 					wibox.widget {
-						markup = '<span weight="bold" foreground="'..beautiful.red..'">'..v.item.title..'</span>',
-						widget = wibox.widget.textbox
+						image = v.item.icon,
+						widget = wibox.widget.imagebox
 					},
-					wibox.widget {
-						markup = '<span weight="normal">'..v.item.text..'</span>',
-						widget = wibox.widget.textbox
+					{
+						valign = 'centered',
+						wibox.widget {
+							markup = '<span weight="bold" foreground="'..beautiful.red..'">'..v.item.title..'</span>',
+							widget = wibox.widget.textbox
+						},
+						wibox.widget {
+							markup = '<span weight="normal">'..v.item.text..'</span>',
+							widget = wibox.widget.textbox
+						},
+						layout = wibox.layout.fixed.vertical
 					},
-					layout = wibox.layout.fixed.vertical
+					valign = 'center',
+					layout = wibox.layout.fixed.horizontal,
+					forced_width = 230,
+					spacing = 10
 				},
-				valign = 'center',
-				layout = wibox.layout.fixed.horizontal,
-				forced_width = 230,
-				spacing = 10
+				box(beautiful.red, '', '', function(...)
+					notifications:del(i)
+				end, 8),
+				forced_height = 18,
+				spacing = 10,
+				layout = wibox.layout.fixed.horizontal
 			},
-			box(beautiful.red, '', 'echo hi >> /dev/null', function(...)
-				local index = i
-				notifications:del(index)
-			end, 8),
-			forced_height = 18,
-			spacing = 10,
-			layout = wibox.layout.fixed.horizontal
+			opacity = v.item.opacity or 100,
+			bg = beautiful.bg_normal,
+			widget = wibox.container.background
 		}
-	))
-	collectgarbage("collect")
+		content:add(row(widget))
+		collectgarbage("collect")
 	end
 end)
 
