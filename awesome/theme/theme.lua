@@ -1,6 +1,3 @@
-------------
--- Lucius --
-------------
 local xresources = require('lib.beautiful.xresources')
 local dpi = xresources.apply_dpi
 
@@ -11,12 +8,12 @@ local conf = require('conf')
 
 theme = gears.table.join(
 	theme,
-	require('theme.'..conf.COLOR_THEME..'.basic'),
-	require('theme.'..conf.COLOR_THEME..'.layout'),
-	require('theme.'..conf.COLOR_THEME..'.notification'),
-	require('theme.'..conf.COLOR_THEME..'.titlebar'),
-	require('theme.'..conf.COLOR_THEME..'.topbar'),
-	require('theme.'..conf.COLOR_THEME..'.colors')
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.basic'),
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.layout'),
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.notification'),
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.titlebar'),
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.topbar'),
+	require('theme.'..conf.DEFAULT_COLOR_THEME..'.colors')
 )
 -- table.insert(theme, require('theme.basic'))
 

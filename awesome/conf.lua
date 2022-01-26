@@ -1,7 +1,18 @@
 return {
-	COLOR_THEME = 'red',
+	DEFAULT_COLOR_THEME = 'red',
 	WALLPAPER   = '/home/max/.config/awesome/theme/katakana.png',
-	SIDEBAR     = true,
+	SIDEBAR     = {
+		modules = {
+			clock         = true,
+			spotify       = true,
+			controls      = true,
+			monitors      = true,
+			weather       = false,
+			notifications = false,
+			system        = true,
+		},
+		enabled = true,
+	},
 	EDGES       = true,
-	SYSTRAY     = false
+	SYSTRAY     = false,
 }

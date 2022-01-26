@@ -5,6 +5,7 @@ local rubato = require('rubato')
 local row = require('widgets.sidebar.row')
 local dpi = xresources.apply_dpi
 local borders = require('lib.borders')
+local conf = require('conf')
 local gears = require('lib.gears')
 --[[ Sidebar Construction ]]--
 
@@ -29,17 +30,21 @@ local margin_size = 30
 local container = wibox.container.margin()
 container.margins = margin_size
 container:setup {
-	row(require('widgets.sidebar.clock'),         98),
-	row(require('widgets.sidebar.spotify'),       80),
-	row(require('widgets.sidebar.controls'),      90),
-	row(require('widgets.sidebar.monitor'),       90),
-	row(require('widgets.sidebar.weather'),       75),
-	row(require('widgets.sidebar.notifications'), 210),
+	{
+		conf.SIDEBAR.modules.clock         and row(require('widgets.sidebar.clock'),         98) or nil,
+		conf.SIDEBAR.modules.spotify       and row(require('widgets.sidebar.spotify'),       80) or nil,
+		conf.SIDEBAR.modules.controls      and row(require('widgets.sidebar.controls'),      90) or nil,
+		conf.SIDEBAR.modules.monitor       and row(require('widgets.sidebar.monitor'),       90) or nil,
+		conf.SIDEBAR.modules.weather       and row(require('widgets.sidebar.weather'),       75) or nil,
+		conf.SIDEBAR.modules.notifications and row(require('widgets.sidebar.notifications'), 210)or nil,
+			
+		layout = wibox.layout.fixed.vertical,
+		spacing = 30,
+	},
+	nil,
+	conf.SIDEBAR.modules.system and row(require('widgets.sidebar.system'), 53) or nil,
 
-	row(require('widgets.sidebar.system'),        53),
-
-
-	layout = wibox.layout.fixed.vertical,
+	layout = wibox.layout.align.vertical,
 	expand = "none",
 	spacing = 30
 }

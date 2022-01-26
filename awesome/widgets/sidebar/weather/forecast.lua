@@ -6,7 +6,7 @@ local dpi = beautiful.xresources.apply_dpi
 
 local json = require("lib.json")
 
-local OPEN_WEATHER_URL = "https://api.openweathermap.org/data/2.5/onecall?units=metric&lat=33.44&lon=-94.04&exclude=hourly,minutely,current,alerts&appid="
+local OPEN_WEATHER_URL = "https://api.openweathermap.org/data/2.5/onecall?units=metric&lat=-33.44&lon=151.220002&exclude=hourly,minutely,current,alerts&appid="
 
 local get_command = function(api_key)
     return "curl -X GET '"..OPEN_WEATHER_URL..api_key.."'"
