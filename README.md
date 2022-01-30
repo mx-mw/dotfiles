@@ -3,7 +3,7 @@
     <table>
         <tr>
             <td>Window Manager</td>
-            <td><code>AwesomeWM</code>
+            <td><code>AwesomeWM (git master)</code>
         </tr>
         <tr>
             <td>Terminal</td>
