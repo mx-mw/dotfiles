@@ -7,7 +7,7 @@ local dpi = xresources.apply_dpi
 local wibox     = require('wibox')
 return function () 
     local tray = wibox.widget.systray()
-    
+	
 	local margin = 1
 
     return wibox.container.margin(tray, margin, margin+5, margin, margin)

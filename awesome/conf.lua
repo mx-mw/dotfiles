@@ -14,5 +14,5 @@ return {
 		enabled = true,
 	},
 	EDGES       = true,
-	SYSTRAY     = false,
+	SYSTRAY     = true,
 }
