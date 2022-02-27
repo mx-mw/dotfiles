@@ -1,11 +1,8 @@
 {
-	"Lua.diagnostics.disable": [
-		"lowercase-global",
-		"undefined-global",
-		"deprecated",
-		"ambiguity-1",
-		"different-requires",
-		"unbalanced-assignments",
-		"redundant-parameter"
+	"Lua.diagnostics.globals": [
+		"awesome",
+		"client",
+		"root",
+		"screen"
 	]
 }
